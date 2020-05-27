@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "sofia_pro";
+  src: url("sofia_pro_regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "sofia_pro";
+  background-color: rgb(200, 16, 46);
+  color: white;
+  margin: 1rem;
+}
+
+header {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(200, 16, 46);
+  z-index: 2;
+  height: 5rem;
+}
+
+header h1 {
+  margin: 2rem;
+}
+
+main {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.donut {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.donut.selected {
+  border: 5px solid black;
+}
+
+.donut img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.donut h2 {
+  color: black;
+}
+
+.donut img:hover {
+  transform: scale(1.05);
+}
+
+button {
+  font-family: inherit;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  background-color: rgb(200, 16, 46);
+  color: white;
+  border: 0;
+  border-radius: 9999rem;
+  outline: 0;
+}
