@@ -64,9 +64,8 @@ const vote = async (donutId) => {
 const fetchVotes = async () => {
   const response = await fetch("/votes");
   const votes = await response.json();
-  const donuts = [...document.querySelectorAll(".donut")];
   const selectedDonutId = localStorage.getItem("selectedDonutId");
-  donuts.forEach((donut) => {
+  document.querySelectorAll(".donut").forEach((donut) => {
     donut.querySelector(".vote-count").textContent = votes[donut.id] || 0;
     if (donut.id !== selectedDonutId) {
       donut.classList.remove("selected");
