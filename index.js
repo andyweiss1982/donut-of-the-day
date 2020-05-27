@@ -36,7 +36,7 @@ app.get("/votes", async (req, res) => {
     `SELECT * FROM votes WHERE date = CURRENT_DATE;`
   );
   const votes = rows.reduce((object, row) => {
-    object[row.donut] = object[row.donut] ? object[row.donut]++ : 1;
+    object[row.donut] = object[row.donut] ? ++object[row.donut] : 1;
     return object;
   }, {});
   res.json(votes);
