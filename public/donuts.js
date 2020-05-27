@@ -25,7 +25,7 @@ const query = `
 
 const renderDonut = (donut) => `
   <section class="donut" id="${donut._id}">
-    <img src="${donut.image?.asset?.url}" alt="${donut.name.en}"/>
+    <img src="${donut.image.asset.url}" alt="${donut.name.en}"/>
     <h2 class="vote-count">0</h2>
     <button onclick="vote('${donut._id}')">${donut.name.en}</button>
   </section>`;
