@@ -60,13 +60,13 @@ main {
   transition: transform 0.3s;
 }
 
-.vote-count {
-  color: black;
-}
-
 .donut img:hover,
 .donut.selected img {
   transform: scale(1.05);
+}
+
+.vote-count {
+  color: black;
 }
 
 button {
