@@ -60,7 +60,7 @@ main {
   transition: transform 0.3s;
 }
 
-.donut h2 {
+.vote-count {
   color: black;
 }
 
