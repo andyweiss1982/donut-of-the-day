@@ -44,10 +44,10 @@ const fetchDonuts = async () => {
       Section: { options },
     },
   } = await response.json();
-  const displayDonuts = options.filter(
+  const donuts = options.filter(
     (option) => option.name?.en && option.image?.asset?.url
   );
-  main.innerHTML = displayDonuts.map((donut) => renderDonut(donut)).join("");
+  main.innerHTML = donuts.map((donut) => renderDonut(donut)).join("");
   fetchVotes();
 };
 
