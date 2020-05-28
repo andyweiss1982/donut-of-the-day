@@ -46,7 +46,7 @@ main {
   background-color: white;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 5px solid white;
+  border: 0.25rem solid white;
 }
 
 .donut.selected {
