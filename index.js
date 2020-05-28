@@ -6,7 +6,8 @@ const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 const PORT = process.env.PORT || 3000;
 
 pool.query(`
-  CREATE TABLE IF NOT EXISTS votes (
+  SET TIMEZONE='US/Eastern';
+  CREATE TABLE IF NOT EXISTS votes(
     id SERIAL PRIMARY KEY,
     donut VARCHAR(256) NOT NULL,
     voter VARCHAR(256) NOT NULL,
