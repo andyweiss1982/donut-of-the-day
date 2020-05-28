@@ -25,7 +25,7 @@ header {
   right: 0;
   background-color: rgb(200, 16, 46);
   z-index: 2;
-  height: 5rem;
+  height: 6rem;
 }
 
 header h1 {
@@ -45,11 +45,12 @@ main {
   place-items: center;
   background-color: white;
   padding: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+  border: 5px solid white;
 }
 
 .donut.selected {
-  border: 5px solid black;
+  border: 0.25rem solid black;
 }
 
 .donut img {
@@ -63,7 +64,8 @@ main {
   color: black;
 }
 
-.donut img:hover {
+.donut img:hover,
+.donut.selected img {
   transform: scale(1.05);
 }
 
